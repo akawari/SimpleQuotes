@@ -3,10 +3,11 @@ class Quote < ApplicationRecord
     #
     # @return [Quote]
     # the random quote
-    validates_presence_of :body
+    
     def self.get_random_quote
         self.all.sample
     end
     
+    validates_presence_of :body
     
 end
